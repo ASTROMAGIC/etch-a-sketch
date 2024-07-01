@@ -1,7 +1,7 @@
 body {
     width: 400px;
     height: 400px;
-    border: solid 2px white;
+    border: solid 2px rgb(0, 0, 0);
 }
 
 div {
@@ -24,6 +24,14 @@ div {
 }
 
 .grid-item {
+    border: 1px solid black;
+}
+
+#clear-button {
+    border: 1px solid black;
+}
+
+#resize-button {
     border: 1px solid black;
 }
 
