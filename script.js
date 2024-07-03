@@ -11,8 +11,9 @@ function populateBoard(size) {
 
     let amount = size * size;
     for(let i =0; i<amount; i++) {
-        let sqaure = document.createElement('div')
-        sqaure.style.backgroundColor= 'blue';
+        let sqaure = document.createElement("div");
+        sqaure.addEventListener("mouseover", colorSquare);
+        sqaure.style.backgroundColor= 'white';
         board.insertAdjacentElement('beforeend', sqaure);
     }
 }
@@ -35,3 +36,11 @@ function changeSize(input){
 // if else conditional written to ensure the sketch board doesn't crash when the input is too high.
 
 // we have created a function to change the size of our board which can be attached to the html file with a button onlick attachment. 
+
+//july 3rd continuation: adding drawing functionality to populate board function. How can we manipulate the DOM to recognize the sqaures being "drawn" upon? Initially I believe there are a couple of ways to do this. One is adding an event listener into the board populate to recognize the mouse going over the board and changing the color of the squares the mouse will go over. Another idea that I have is an adding an event listener that responds to the mouse going over the board and then changing the color. I think it would be a good idea to try both version 
+
+// let's add a function to color that squares that will integrate into our populate board function 
+
+function colorSquare() {
+    this.style.backgroundColor="black";
+}
