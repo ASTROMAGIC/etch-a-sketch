@@ -30,9 +30,10 @@ populateBoard(16);
 
 function changeSize(input) {
     if (input >= 2 && input <= 100){
+        document.querySelector('.error').style.display = "none";
         populateBoard(input); 
     } else {
-        console.log("Too many Squares!");
+        document.querySelector('.error').style.display = "flex";
     }    
 }
 
@@ -79,8 +80,18 @@ function resetBoard() {
 // will now add clicking functionality so specific shapes can be drawn 
 
 
-document.querySelector("body").addEventListener("click", () => {
-    click = !click;
+document.querySelector("body").addEventListener("click", (e) => {
+   if (e.target.tagName != "BUTTON") {
+    if(click) {
+        document.querySelector('.mode').textContent = "Mode: Coloring"
+    } else {
+        document.querySelector('.mode').textContent = "Mode: Not Coloring"
+    }
+   }
 });
 
 // clicking on and off can now be toggled on the board so specific shapes can be drawn. 
+
+// we have no readjusted our click function to not change the mode of the etch a sketch board upon clicking buttons, only clicking the board will change the mode. 
+
+// click function has stopped working for some reason, will need to look at it again. 
