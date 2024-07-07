@@ -3,21 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css">
     <title>Etch-A-Sketch!</title>
 </head>
-<link rel="stylesheet" href="reset.css">
-<link rel="stylesheet" href="styles.css">
-<body>
 
+<body>
 <div class="flex-container">
     <div class="title"><h1>Etch-A-Sketch!</h1></div>
     <div class="content">
         <div class="board"></div>
         <div class="buttons">
             <button id ="clear-button">Clear</button>
-            <button id ="black">Black</button>
-            <button id ="white">White</button>
-            <button id ="random-color">Random</button>
+            <button onclick="changeColor('black')">Black</button>
+            <button onclick="changeColor('white')">Erase</button>
+            <button onclick="changeColor('gray')">Gray</button>
+            <button onclick="changeColor('random')">Random</button>
         </div>
         <div>
             <input type="text" placeholder="Size of" value="16" onchange="changeSize(this.value)">
@@ -28,7 +29,8 @@
 
 <!--note that the entire project is contained with a div that will have flexbox applied to it -->
 <!--for the input portion, I would be interested to see if I can make this input also work by doing button onlick, but looking at the way it is written, this may take some tinkering of the input itself-->
- 
-<script src ="script.js"></script>  
-</body>
+ </body>
+
+ <script src ="script.js"></script>  
+
 </html>
