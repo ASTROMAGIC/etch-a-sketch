@@ -1,4 +1,5 @@
 let color = "black";
+let click = true;
 
 // this is a for loop to create the square divs for the baord up to a limit of 256, which is essentially a 16x16 grid. The style elements are for you to see each style.
 
@@ -44,11 +45,13 @@ function changeSize(input) {
 // let's add a function to color that squares that will integrate into our populate board function 
 
 function colorSquare() {
-    if(color === "random"){
+    if (click) { 
+        if(color === "random") {
         this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
     } else {
         this.style.backgroundColor = color;
     }
+    }    
 }
 
 // with this function in particular, it is being added to each new square that you create to shift its color, since each square div is being made through the dom.
@@ -72,3 +75,12 @@ function resetBoard() {
 }
 
 // as of now, the MVP of the project is 100% finished and now we just need to style the project. 
+
+// will now add clicking functionality so specific shapes can be drawn 
+
+
+document.querySelector("body").addEventListener("click", () => {
+    click = !click;
+});
+
+// clicking on and off can now be toggled on the board so specific shapes can be drawn. 
