@@ -64,3 +64,11 @@ function changeColor(choice) {
 // after adding a variable and a function to change color, my "pen" is no longer working. 
 
 // i did not change my function in color sqaure to take in the new variable of "color" that I had just created, hence why the coloring stopped working 
+
+function resetBoard() {
+    let board = document.querySelector('.board');
+    let squares = board.querySelectorAll('div');
+    squares.forEach((div) => div.style.backgroundColor = 'white');
+}
+
+// as of now, the MVP of the project is 100% finished and now we just need to style the project. 
