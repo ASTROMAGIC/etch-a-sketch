@@ -29,11 +29,11 @@ populateBoard(16);
 // now we call the function to ensure all of our divs are created before we put our variables and loops into our function
 
 function changeSize(input) {
-    if (input >= 2 && input <= 100){
-        document.querySelector('.error').style.display = "none";
+    if (input >= 2 && input <= 100) {
+        document.querySelector(".error").style.display = "none";
         populateBoard(input); 
     } else {
-        document.querySelector('.error').style.display = "flex";
+        document.querySelector(".error").style.display = "flex";
     }    
 }
 
