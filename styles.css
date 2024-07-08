@@ -7,14 +7,102 @@
     background-color: linear-gradient(rgba(95,78,250,.082), white);
 }
 
+body{
+    background-color: blanchedalmond;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
 
+.board{
+    width: 80%;
+    height: 80%;
+    display: grid;
+    background-color: bisque;
+    box-shadow: inset black, white, black;
+}
+
+
+.content{
+    display: flex;flex-direction: column;
+    align-items: center;
+    min-width: 300px;
+    min-height: 300px;
+    width: 60vw;
+    height: 60vw;
+    max-width: 600px;
+    max-height: 600px;
+}
 
 .board{
     width: 500px;
     height: 500px;
     display: grid;
+    background-color: white;
+    box-shadow: inset 0 -3em 3em black, 0 0 0 2px white, 0.3em 0.3em 1em black;
+    
 }
 
 .error {
     display: none;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+}
+
+.buttons {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.mode {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: .3em 1.2em;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 2em;
+    font-weight: 500;
+    text-align: center;
+    transition: all .2s;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.blackButton{
+    background-color: black;
+    color: white;
+}
+
+.blackButton:hover{
+    background-color: white;
+    color: black;
+}
+
+.grayButton{
+    background-color: gray;
+    color: rgb(0, 0, 0);
+}
+
+.grayButton:hover{
+    background-color: grey;
+    color: white;
+}
+
+.randomColor{
+    background: linear-gradient(0.05turn, pink, blue, darkgreen);
+    color: white;
+}
+
+.randomColor:hover{
+    background: linear-gradient(0.05turn, darkgreen, blue, pink);
+    color:white
+}
+
+input{
+    width: 50px;
 }
